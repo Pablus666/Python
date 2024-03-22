@@ -1,7 +1,11 @@
 from django.shortcuts import render
 from django.http import HttpResponse
 
+from goods.models import Categories
+
 def index(request):
+
+    categjries = Categories.objects
     context: dict = {
         "title": "Home - главная",
         "content": "Магазин мебели HOME"
